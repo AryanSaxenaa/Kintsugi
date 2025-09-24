@@ -14,22 +14,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<Map<String, String>> features = [
     {
-      'title': 'Text Query Processing',
-      'desc': 'Get instant answers from your washing machine.',
+      'title': 'Jusk Ask!',
+      'desc': 'Get instant answers for your washing machine',
       'img': 'assets/app-images/washing-machine-front-sixe.png',
     },
     {
-      'title': 'Audio Analysis',
+      'title': 'Instant Diagnosis',
       'desc': 'Diagnose issues by uploading machine sounds.',
       'img': 'assets/app-images/Detergent-floating.png',
     },
     {
-      'title': 'Image Diagnosis',
+      'title': 'Upload Images',
       'desc': 'Upload machine images for instant diagnostics.',
       'img': 'assets/app-images/washing-machine-along-with-laundary.png',
     },
     {
-      'title': 'Voice Integration',
+      'title': 'Hands free support',
       'desc': 'Talk to Kintsugi for hands-free support.',
       'img': 'assets/app-images/washing-machine-with-people-around-it.png',
     },
@@ -117,7 +117,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     );
                   }
                 },
-                child: Text(_currentPage == features.length - 1 ? 'Get Started' : 'Next'),
+                child: Text(
+                  _currentPage == features.length - 1 ? 'Get Started' : 'Next',
+                  style: const TextStyle(color: Colors.white),
+                ),
               ),
             ),
             const SizedBox(height: 24),
