@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'screens/splash_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // Initialize app
+  print('🚀 Kintsugi washing machine diagnostic app starting...');
+  
   runApp(const KintsugiApp());
 }
 

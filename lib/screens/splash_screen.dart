@@ -83,24 +83,14 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
               builder: (context, child) {
                 return FadeTransition(
                   opacity: _textAnimation,
-                  // child: const Text(
-                  //   'KINTSUGI',
-                  //   style: TextStyle(
-                  //     color: Colors.white,
-                  //     fontSize: 48,
-                  //     fontWeight: FontWeight.w900,
-                  //     letterSpacing: 4,
-                  //     fontFamily: 'RobotoCondensed',
-                  //   ),
-                  const Text(
-                      'KINTSUGI',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 48,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 4,
-                      ),
-                    );
+                  child: const Text(
+                    'KINTSUGI',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 48,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 4,
+                    ),
                   ),
                 );
               },

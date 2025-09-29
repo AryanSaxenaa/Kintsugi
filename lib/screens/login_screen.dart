@@ -40,47 +40,42 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Color(0xFF8E2DE2), // Purple
-              Color(0xFF4A00E0), // Darker Purple
-            ],
-          ),
-        ),
+      backgroundColor: const Color(0xFF1428A0), // Samsung blue to match splash
+      body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 24),
+            padding: const EdgeInsets.all(32),
             child: FadeTransition(
               opacity: _fadeInAnimation,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Icon(
-                    Icons.lock_open_rounded,
+                  const SizedBox(height: 60),
+                  // Logo matching splash screen
+                  Icon(
+                    Icons.local_laundry_service,
+                    size: 100,
                     color: Colors.white,
-                    size: 80,
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 32),
                   const Text(
-                    'SIGN IN',
+                    'KINTSUGI',
                     style: TextStyle(
                       fontSize: 36,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w900,
                       color: Colors.white,
-                      letterSpacing: 3,
+                      letterSpacing: 4,
                     ),
                   ),
-                  const SizedBox(height: 48),
+
+                  const SizedBox(height: 60),
                   _buildTextField(
                     controller: _emailController,
                     labelText: 'Email',
                     icon: Icons.email_outlined,
                   ),
-                  const SizedBox(height: 24),
+                  const SizedBox(height: 20),
                   _buildTextField(
                     controller: _passwordController,
                     labelText: 'Password',
@@ -90,18 +85,17 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                   const SizedBox(height: 32),
                   SizedBox(
                     width: double.infinity,
+                    height: 56,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
-                        foregroundColor: const Color(0xFF4A00E0),
-                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        foregroundColor: const Color(0xFF1428A0),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(12),
                         ),
-                        elevation: 5,
+                        elevation: 0,
                       ),
                       onPressed: () {
-                        // Demo credentials: user@demo.com / demo123
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(builder: (context) => const ChatScreen()),
@@ -110,9 +104,23 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                       child: const Text(
                         'Sign In',
                         style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
                         ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  TextButton(
+                    onPressed: () {
+                      // Forgot password action
+                    },
+                    child: Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.8),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
@@ -134,20 +142,40 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
     return TextField(
       controller: controller,
       obscureText: obscureText,
-      style: const TextStyle(color: Colors.white),
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+      ),
       decoration: InputDecoration(
         labelText: labelText,
-        labelStyle: TextStyle(color: Colors.white.withOpacity(0.7)),
-        prefixIcon: Icon(icon, color: Colors.white),
+        labelStyle: TextStyle(
+          color: Colors.white.withOpacity(0.7),
+          fontSize: 16,
+          fontWeight: FontWeight.w400,
+        ),
+        prefixIcon: Icon(
+          icon, 
+          color: Colors.white.withOpacity(0.7),
+          size: 22,
+        ),
         filled: true,
-        fillColor: Colors.white.withOpacity(0.2),
+        fillColor: Colors.white.withOpacity(0.1),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
-          borderSide: BorderSide(color: Colors.white.withOpacity(0.5)),
+          borderRadius: BorderRadius.circular(12),
+          borderSide: BorderSide(color: Colors.white.withOpacity(0.3), width: 1),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(color: Colors.white, width: 2),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: Colors.red, width: 1),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(12),
+          borderSide: const BorderSide(color: Colors.red, width: 2),
         ),
       ),
     );

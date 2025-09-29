@@ -14,24 +14,24 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   final List<Map<String, String>> features = [
     {
-      'title': 'Jusk Ask!',
+      'title': 'Just Ask!',
       'desc': 'Get instant answers for your washing machine',
       'img': 'assets/app-images/washing-machine-front-sixe.png',
     },
     {
       'title': 'Instant Diagnosis',
-      'desc': 'Diagnose issues by uploading machine sounds.',
+      'desc': 'Diagnose issues by uploading machine sounds',
       'img': 'assets/app-images/Detergent-floating.png',
     },
     {
       'title': 'Upload Images',
-      'desc': 'Upload machine images for instant diagnostics.',
+      'desc': 'Upload machine images for instant diagnostics',
       'img': 'assets/app-images/washing-machine-along-with-laundary.png',
     },
     {
       'title': 'Hands free support',
-      'desc': 'Talk to Kintsugi for hands-free support.',
-      'img': 'assets/app-images/washing-machine-with-people-around-it.png',
+      'desc': 'Get expert help without lifting a finger',
+      'img': 'assets/app-images/Laundary-building.png',
     },
   ];
 
@@ -58,10 +58,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(feature['img']!, height: 180),
+                        Image.asset(feature['img'] ?? 'assets/app-images/washing-machine.png', height: 180),
                         const SizedBox(height: 32),
                         Text(
-                          feature['title']!,
+                          feature['title'] ?? 'Samsung Support',
                           style: const TextStyle(
                             fontSize: 28,
                             fontWeight: FontWeight.w900,
@@ -72,7 +72,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         const SizedBox(height: 16),
                         Text(
-                          feature['desc']!,
+                          feature['desc'] ?? 'Get help with your Samsung washing machine',
                           textAlign: TextAlign.center,
                           style: const TextStyle(fontSize: 16),
                         ),
