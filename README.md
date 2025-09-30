@@ -8,361 +8,486 @@
   [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://android.com/)
 </div>
 
-## 📱 About
+Kintsugi is a Samsung-themed mobile assistant that helps users troubleshoot washing-machine issues through chat, audio/image analysis, and quick escalations.
+Beyond the Flutter app, Kintsugi integrates multiple AI services you built:
 
-**Kintsugi** is an intelligent washing machine diagnostic application built with Flutter that helps users troubleshoot Samsung washing machine issues through an interactive chat interface. The name "Kintsugi" comes from the Japanese art of repairing broken pottery with gold, symbolizing how we help fix and improve washing machine problems.
+RAG Samsung Manual Chatbot (LangChain + Chroma + Gradio)
 
-### 🌟 Key Features
+Multi-Modal AI Chatbot Orchestrator (text/image/audio + Groq summaries)
 
-- **🤖 AI-Powered Chat Interface**: Interactive diagnostic conversations with intelligent responses
-- **🎙️ Audio Recording**: Record washing machine sounds for audio-based diagnostics (WAV format)
-- **📷 Image Attachments**: Capture and attach photos of washing machine issues with automatic compression
-- **🚨 Escalation System**: Submit service requests with static ticket generation
-- **🎨 Samsung Theme**: Beautiful Samsung blue (#1428A0) color scheme throughout the app
-- **📱 Mobile-First Design**: Optimized for Android devices with responsive UI
-- **🔊 Multimedia Support**: Handle images (PNG/JPG), audio (WAV), and text inputs
+Image Color Classifier (Rust/Zinc/Normal via OpenCV heuristics)
 
-## 🏗️ Architecture
+Hierarchical Audio Classifier (Mel-spectrogram CNNs for sound anomalies)
 
-### Frontend (Flutter/Dart)
-- **Framework**: Flutter 3.13.0+
-- **Language**: Dart
-- **UI Components**: Material Design with custom Samsung theming
-- **State Management**: StatefulWidget with local state management
-- **Navigation**: Flutter's built-in navigation system
+The mobile app can work standalone as a frontend today, and you can wire it to these services when ready.
 
-### Core Screens
-- `splash_screen.dart` - App startup and branding
-- `onboarding_screen.dart` - User introduction and setup
-- `login_screen.dart` - User authentication interface
-- `chat_screen.dart` - Main diagnostic chat interface
-- `escalation_screen.dart` - Service request submission
+🌟 Key Features (Mobile)
 
-### Services
-- `kintsugi_api_service.dart` - API communication service
-- `escalation_service.dart` - Static escalation ticket management
-- `audio_recorder_service.dart` - Audio recording functionality
+🤖 AI-Powered Chat Interface (diagnostic conversation)
 
-### Key Dependencies
-```yaml
-dependencies:
-  flutter: sdk: flutter
-  cupertino_icons: ^1.0.6
-  animated_splash_screen: ^1.3.0
-  flutter_svg: ^2.0.7
-  google_fonts: ^6.1.0
-  provider: ^6.0.5
-  http: ^1.1.0
-  image_picker: ^1.0.4
-  image: ^4.0.17
-  flutter_sound: ^9.2.13
-  path_provider: ^2.1.1
-  permission_handler: ^11.0.1
-```
+🎙️ Audio Recording (WAV, 16 kHz, mono, PCM16)
 
-## 🚀 Getting Started
+📷 Image Attachments (auto-compression, PNG/JPG)
 
-### Prerequisites
+🚨 Escalation System (static ticket generation)
 
-Before you begin, ensure you have the following installed:
+🎨 Samsung Theme (primary #1428A0)
 
-- **Flutter SDK** (3.13.0 or higher)
-- **Dart SDK** (3.1.0 or higher)
-- **Android Studio** or **VS Code** with Flutter extensions
-- **Android SDK** (API level 21 or higher)
-- **Git** for version control
+📱 Android-first (responsive UI)
 
-### Installation
+Core Screens
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/AryanSaxenaa/KintsugiNew.git
-   cd Kintsugi
-   ```
+splash_screen.dart — branding
 
-2. **Install Flutter dependencies**
-   ```bash
-   flutter pub get
-   ```
+onboarding_screen.dart
 
-3. **Verify Flutter setup**
-   ```bash
-   flutter doctor
-   ```
+login_screen.dart — demo credentials
 
-4. **Connect your Android device or start an emulator**
+chat_screen.dart — main diagnostic chat
 
-5. **Run the application**
-   ```bash
-   flutter run
-   ```
+escalation_screen.dart — submit service request
 
-### Demo Credentials
-- **Email**: user@demo.com
-- **Password**: demo123
+Services
 
-### Android Permissions
+kintsugi_api_service.dart — (future) API comms
 
-The app requires the following permissions (automatically handled):
-- `INTERNET` - For API communication
-- `RECORD_AUDIO` - For audio recording functionality
-- `CAMERA` - For taking photos
-- `READ_EXTERNAL_STORAGE` - For accessing gallery images
-- `WRITE_EXTERNAL_STORAGE` - For saving recorded audio files
+escalation_service.dart — static tickets
 
-## 🎯 Usage Guide
+audio_recorder_service.dart — recording
 
-### 1. **Starting the App**
-- Launch the app and go through the onboarding process
-- Complete the login process with demo credentials
-- You'll be taken to the main chat interface
+Android Permissions
 
-### 2. **Chat Interface**
-- Type messages to describe washing machine issues
-- Use the attachment button (📎) to access multimedia options:
-  - **Camera**: Take photos of the washing machine
-  - **Gallery**: Select existing images
-  - **Audio Recording**: Record machine sounds for diagnosis
+INTERNET, RECORD_AUDIO, CAMERA, READ/WRITE_EXTERNAL_STORAGE
 
-### 3. **Audio Recording**
-- Tap the recording option in the attachment menu
-- Record washing machine sounds (optimal: 5-30 seconds)
-- Stop recording when done - files are saved in WAV format
+🏗️ End-to-End Architecture (At a Glance)
 
-### 4. **Image Attachments**
-- Images are automatically compressed to under 2MB
-- Supports PNG and JPG formats
-- Perfect for showing error codes, machine conditions, or problem areas
+Kintsugi App (Flutter)
+→ sends requests / uploads → API Gateway (planned)
+→ routes to one of the AI services:
 
-### 5. **Escalation System**
-- Tap the escalation button (⚠️) in the app bar
-- Fill out the service request form:
-  - Issue description
-  - Customer information
-  - Model number
-  - Priority level (Critical, High, Medium, Low)
-  - Service center selection
-  - Additional requirements
-- Submit to generate a static ticket ID
+Manual QA → RAG Samsung Manual Chatbot (LangChain + Chroma + FLAN-T5)
 
-## 🔧 Technical Details
+Image Diagnostics → Image Color Classifier (OpenCV, Lab-space heuristics)
 
-### Image Processing
-- **Compression**: Automatic compression to ensure files stay under 2MB
-- **Format Conversion**: All images converted to PNG for API compatibility
-- **Quality Optimization**: Maintains visual quality while reducing file size
+Audio Diagnostics → Hierarchical Audio Classifier (Mel-spec CNN, 2-stage)
 
-### Audio Recording
-- **Format**: WAV (16kHz, mono, PCM16)
-- **Duration**: Configurable recording length
-- **Storage**: Temporary files with automatic cleanup
-- **Permissions**: Runtime microphone permission handling
+General Chat / Mixed Inputs → Multi-Modal Chatbot Orchestrator (Gradio clients + Groq summarization)
 
-### API Integration
-- **HTTP Client**: Custom service for API communication
-- **Timeout Handling**: 5-minute timeout for all requests
-- **Error Management**: Comprehensive error handling and user feedback
-- **Response Parsing**: JSON response processing with fallback handling
+Responses (and any summaries) are rendered back in the Chat UI with persistent conversation history.
 
-### Static Escalation System
-- **Ticket Generation**: Local ticket ID generation with timestamp
-- **Form Validation**: Comprehensive input validation
-- **Priority Levels**: Critical, High, Medium, Low
-- **No Database**: Self-contained system without external database dependencies
+📱 Mobile App (Flutter/Dart)
+Setup
+git clone https://github.com/AryanSaxenaa/KintsugiNew.git
+cd Kintsugi
+flutter pub get
+flutter doctor
+flutter run
 
-## 📁 Project Structure
 
-```
-lib/
-├── main.dart                 # App entry point
-├── screens/                  # UI screens
-│   ├── splash_screen.dart
-│   ├── onboarding_screen.dart
-│   ├── login_screen.dart
-│   ├── chat_screen.dart
-│   └── escalation_screen.dart
-├── services/                 # Business logic services
-│   ├── kintsugi_api_service.dart
-│   ├── escalation_service.dart
-│   └── audio_recorder_service.dart
-└── assets/
-    └── app-images/           # App assets and images
-        ├── washing-machine.png
-        ├── washing-machine.gif
-        └── [other assets]
-```
+Demo credentials:
+Email: user@demo.com
+Password: demo123
 
-## 🎨 Design System
-
-### Color Scheme
-- **Primary**: Samsung Blue (#1428A0)
-- **Background**: White (#FFFFFF)
-- **Text**: Dark Gray (#333333)
-- **Accent**: Light Blue variations
-
-### Typography
-- **Font Family**: Google Fonts integration
-- **Headings**: Bold, Sans-serif
-- **Body Text**: Regular, readable font sizes
-- **UI Elements**: Consistent sizing and spacing
-
-## 🧪 Testing
-
-### Running Tests
-```bash
-# Run all tests
-flutter test
-
-# Run tests with coverage
-flutter test --coverage
-```
-
-### Manual Testing Checklist
-- [ ] App launches successfully
-- [ ] Chat interface responds correctly
-- [ ] Image attachment and compression works
-- [ ] Audio recording functions properly
-- [ ] Escalation form submission works
-- [ ] Navigation between screens is smooth
-- [ ] Permissions are requested appropriately
-
-## 📦 Build and Deployment
-
-### Development Build
-```bash
+Build
+# Debug
 flutter run --debug
-```
 
-### Release Build
-```bash
-# Build APK
+# Release APK
 flutter build apk --release
 
-# Build App Bundle (recommended for Play Store)
+# Release App Bundle
 flutter build appbundle --release
-```
 
-### Build Outputs
-- **APK**: `build/app/outputs/flutter-apk/app-release.apk`
-- **App Bundle**: `build/app/outputs/bundle/release/app-release.aab`
+Typical Use
 
-## 🐛 Troubleshooting
+Launch app → onboarding → login
 
-### Common Issues
+Chat your issue (attach photos/audio if needed)
 
-**1. Flutter Doctor Issues**
-```bash
-flutter doctor
-# Follow the recommendations to fix any issues
-```
+Submit escalation with details → get ticket ID
 
-**2. Dependency Conflicts**
-```bash
-flutter clean
-flutter pub get
-```
+🧩 Integrated AI Services (Backends)
 
-**3. Android Build Errors**
-```bash
-cd android
-./gradlew clean
-cd ..
-flutter run
-```
+Below are the unified READMEs + methodologies for each service, adapted to slot under Kintsugi.
 
-**4. Audio Recording Permission Issues**
-- Ensure microphone permissions are granted
-- Check device audio recording capabilities
-- Verify audio file paths and storage permissions
+1) RAG Samsung Manual Chatbot
 
-**5. Image Compression Issues**
-- Verify image file formats (PNG/JPG supported)
-- Check available storage space
-- Ensure proper image picker permissions
+A LangChain + Gradio chatbot that answers from a Samsung manual using embeddings + ChromaDB and conversational memory.
 
-## 🔄 Version History
+Project Structure
+LLM_chatbot2/
+├── chroma_db/           # Persistent Chroma vector DB
+├── temp_docs/           # Place samsung_manual.txt here
+├── app.py               # Gradio app
+├── requirements.txt
+└── README.md
 
-### v1.0.0 (Current)
-- ✅ Initial release with full chat functionality
-- ✅ Audio recording with WAV format support
-- ✅ Image attachments with automatic compression
-- ✅ Static escalation system
-- ✅ Samsung-themed UI design
-- ✅ Android platform support
+Methodology
 
-### Planned Features
-- 🔮 Speech-to-text integration
-- 🔮 Enhanced AI diagnostic capabilities
-- 🔮 Real-time database integration
-- 🔮 Push notifications for service updates
-- 🔮 Multi-language support
-- 🔮 iOS platform support
+Document Ingestion
 
-## 🤝 Contributing
+Load temp_docs/samsung_manual.txt as UTF-8.
 
-We welcome contributions to improve Kintsugi! Please follow these steps:
+If missing, fail fast with a clear error.
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Preprocessing & Chunking
 
-### Development Guidelines
-- Follow Dart/Flutter coding standards
-- Add tests for new features
-- Update documentation as needed
-- Ensure responsive design principles
-- Maintain consistent UI/UX patterns
+RecursiveCharacterTextSplitter with chunk_size=1000, chunk_overlap=200.
 
-## 📄 License
+Embedding
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+sentence-transformers/all-MiniLM-L6-v2 via HuggingFaceEmbeddings
 
-## 🆘 Support
+good latency/quality trade-off.
 
-For support, please contact:
-- **Email**: [support@kintsugi.app](mailto:support@kintsugi.app)
-- **GitHub Issues**: [Create an issue](https://github.com/AryanSaxenaa/KintsugiNew/issues)
-- **Documentation**: [Wiki](https://github.com/AryanSaxenaa/KintsugiNew/wiki)
+Vector Store (Persistence)
 
-## 🙏 Acknowledgments
+ChromaDB at chroma_db/.
 
-- Flutter team for the amazing framework
-- Samsung for design inspiration
-- Open source community for valuable packages
-- Contributors and testers
+First run builds + persists; later runs load (fast startup).
 
----
+Retriever
 
-## 📋 Submissions
+k=2 top chunks per query.
 
-### 📹 Video Demonstrations
-*Please add your video URLs below when available:*
+LLM Generation
 
-- **App Demo Video**: [Add URL here]
-- **Feature Walkthrough**: [Add URL here]
-- **Technical Overview**: [Add URL here]
+google/flan-t5-base via pipeline("text2text-generation")
+max_length=512, temperature=0.1, top_p=0.95, repetition_penalty=1.2.
 
-### 📚 Additional Resources
-*Add any additional project resources:*
+Conversational Orchestration
 
-- **Live Demo**: [Add URL here]
-- **Documentation**: [Add URL here]
-- **Presentation Slides**: [Add URL here]
-- **Technical Specifications**: [Add URL here]
+ConversationalRetrievalChain with ConversationBufferMemory(return_messages=True).
 
-### 🔗 Repository Links
-- **Main Repository**: [https://github.com/AryanSaxenaa/KintsugiNew](https://github.com/AryanSaxenaa/KintsugiNew)
-- **Release Page**: [Add URL here]
-- **Issues & Bug Reports**: [https://github.com/AryanSaxenaa/KintsugiNew/issues](https://github.com/AryanSaxenaa/KintsugiNew/issues)
+UI (Gradio)
 
----
+Status banner (built vs loaded DB), gr.Chatbot, input box, submit wrapper.
 
-<div align="center">
-  <p>Made with ❤️ for Samsung washing machine users worldwide</p>
-  <p><strong>Kintsugi - Fixing what's broken, making it beautiful</strong></p>
-</div>
+Operational Notes
 
-## Note
-This is a frontend-only implementation. No backend or actual AI integration is included yet. The escalation system generates demo ticket IDs and simulates service center communication.
+Reindex: delete chroma_db/.
+
+Swap documents: replace temp_docs/samsung_manual.txt (prefer plain text).
+
+Change models: edit MODEL_NAME_EMBEDDINGS / MODEL_ID_LLM.
+
+Quality & Evaluation (Lightweight)
+
+Grounding checks, follow-up coherence, first-run vs warm-start latency.
+
+Limitations
+
+Works best with clean text; convert PDFs first.
+
+flan-t5-base is compact; upgrade if you need higher fidelity.
+
+Tune k if you miss context.
+
+Install & Run
+git clone https://github.com/Anvit25/LLM_chatbot2.git
+cd LLM_chatbot2
+pip install -r requirements.txt
+python app.py
+# open http://127.0.0.1:7860
+
+2) Multi-Modal AI Chatbot Orchestrator
+
+A unified Gradio UI that routes between text chat, local semantic image search, image analysis, and audio analysis, with Groq summarization for complex outputs.
+
+Methodology
+
+Input Handling
+
+Multimodal textbox (text/image/audio).
+
+Intent Classification
+
+Rule-based (intents.json):
+
+"chat" → hosted chatbot LLM
+
+"search_local_image" → local semantic search
+
+"request_image_analysis" → ask user to upload image
+
+"request_audio_analysis" → ask user to upload audio
+
+Local Semantic Search
+
+image.json provides descriptions for images under /images/.
+
+Encode with all-MiniLM-L6-v2, cosine similarity; if sim > 0.4, return best image.
+
+Image Analysis Workflow
+
+Send to a vision Gradio client → get raw JSON → summarize via Groq (Llama-3.3-70B) for clear, concise user text.
+
+Audio Analysis Workflow
+
+Send audio to audio Gradio client → return human-readable result.
+
+Groq Summarization
+
+Converts technical JSON to friendly prose.
+
+Conversation Management
+
+History preserved for context; multimodal outputs rendered inline.
+
+Architecture Flow
+
+User (Text/Image/Audio)
+    ↓
+Intent Classifier (intents.json rules)
+    ├─ Chat → Chatbot Client (LLM)
+    ├─ Search Local Image → Embedding Match
+    ├─ Image Analysis → Vision Client + Groq Summary
+    └─ Audio Analysis → Audio Client
+    ↓
+Response Generator (Groq + History)
+    ↓
+Gradio Chat UI
+
+
+Setup
+
+.env with GROQ_API_KEY=...
+
+Dependencies: gradio, gradio_client, sentence-transformers, numpy, requests, python-dotenv
+
+3) Image Color Classifier (Rust / Zinc / Normal)
+
+Goal: Fast, explainable detection of rustish/zincish tendencies using CIELab channel heuristics, plus dominant color palette via K-Means.
+
+Pipeline
+
+Input & Preprocess
+
+Read image, optional resize (speed).
+
+Color Spaces
+
+Convert BGR→RGB/HSV/Lab; compute per-space stats.
+
+Dominant Colors
+
+cv.kmeans (k=3 by default), palette image + shares.
+
+Lab Heuristics
+
+Medians a_med, b_med; thresholds with Δ = lab_delta = 6.0.
+
+rustish_ratio = mean(a* > a_med + Δ)
+
+zincish_ratio = mean(b* > b_med + Δ)
+
+Rule Decision
+
+if zincish_ratio > zinc_thr → zinc
+
+elif rustish_ratio > rust_thr → rust
+
+else → normal
+
+Defaults & Tuning
+
+k=3, lab_delta=6.0, rust_thr=0.01, zinc_thr=0.02
+
+Increase lab_delta to be stricter; decrease thresholds to increase sensitivity.
+
+Components
+
+FastAPI (/classify/): JSON with label, ratios, palette.
+
+Gradio UI: sliders for k, thresholds, lab_delta.
+
+CLI: generate reports + palette images to color_out/.
+
+Quickstart
+
+requirements.txt (fixed)
+
+fastapi[all]
+uvicorn
+opencv-python-headless
+numpy
+gradio
+
+
+Run API
+
+uvicorn api:app --host 127.0.0.1 --port 8000
+# docs: http://127.0.0.1:8000/docs
+
+
+Run Gradio
+
+python gradio_app.py
+
+
+cURL Example
+
+curl -X POST "http://127.0.0.1:8000/classify/?k=3&rust_thr=0.01&zinc_thr=0.02&lab_delta=6.0" -F "file=@/path/to/img.jpg"
+
+
+Notes & Limits
+
+Lighting and background affect Lab ratios; encourage consistent, diffuse light.
+
+Heuristic screening, not material certification.
+
+4) Hierarchical Audio Classifier (Washing-Machine Sounds)
+
+Two-stage CNN pipeline on Mel-spectrograms:
+
+Stage-1: Normal vs Abnormal
+
+Stage-2: If Abnormal → (e.g., Dehydration noise); If Normal → (e.g., Wash/Spin)
+
+Methodology
+
+Data
+
+.wav mono clips; group-aware split to avoid leakage.
+
+Preprocessing
+
+sr=22050, n_fft=2048, hop_length=512, n_mels=128
+
+Log-Mel dB, render 224×224 PNG, normalize to [0,1].
+
+Models (per head)
+
+Simple CNN:
+
+Conv2D(32) → MP → Conv2D(64) → MP → Conv2D(128) → MP → Flatten → Dense(128) → Dropout(0.3) → Dense(softmax)
+
+Loss: Sparse CCE, Optimizer: Adam, Metric: Accuracy
+
+Batch 32, ~10 epochs (baseline), tf.data cache/prefetch
+
+Inference Flow
+
+Stage-1 predicts Normal/Abnormal
+
+Route to corresponding Stage-2 head
+
+Return final label + both confidences
+
+Evaluation
+
+Per-stage accuracy/F1 + confusion matrices
+
+End-to-end “hierarchical accuracy”; calibration (ECE) optional
+
+Deployment
+
+Artifacts:
+
+saved_models/{stage1,abnormal,normal}.h5
+
+saved_models/label_meta.json (class index ↔ name)
+
+Repo Layout (example)
+├── app.py                 # Gradio prediction UI
+├── dl.py                  # Training (builds spectrograms + trains)
+├── extractaudio.py        # Quick single-file test
+├── data_pipeline.py
+├── requirements.txt
+├── MelSpectrograms/
+└── saved_models/
+
+🧠 Unified Methodology (System Level)
+
+Problem Framing
+
+Users describe issues via chat, images, and audio.
+
+Kintsugi orchestrates the correct backend: manual QA, visual color screening, audio anomaly detection, or general chat.
+
+Routing / Intent
+
+Rule-based intents (intents.json) in the orchestrator decide where to send the request. The Flutter app can mirror this or defer entirely to the gateway.
+
+Retrieval & Generation
+
+For manual questions, RAG retrieves top-k chunks (k=2) from Chroma and FLAN-T5 generates grounded answers with chat memory.
+
+Image Diagnosis
+
+Color-space heuristics identify rustish/zincish tendencies; palette + JSON provides explainability for technicians.
+
+Audio Diagnosis
+
+Two-stage CNN classifies sounds from spectrograms; useful confidence readouts.
+
+Summarization & UX
+
+Complex outputs (e.g., raw JSON) are summarized by Groq (Llama-3.3-70B) for user-friendly chat responses.
+
+🔌 Wiring Kintsugi to the Services (Roadmap)
+
+Add a Gateway (FastAPI or Node) with routes like:
+
+POST /diagnose/image → Image Color Classifier
+
+POST /diagnose/audio → Audio Classifier
+
+POST /qa/manual → RAG Chatbot
+
+POST /chat/multimodal → Orchestrator
+
+Update kintsugi_api_service.dart to call these endpoints:
+
+Multipart for images/audio
+
+JSON for text prompts
+
+Map responses to chat message types in chat_screen.dart.
+
+🧪 Testing (Mobile)
+flutter test
+flutter test --coverage
+
+
+Manual checklist: app launches, chat flows, attachments compress, audio records, escalation form validates, navigation smooth, permissions requested.
+
+🔮 Future Work
+
+Hybrid intent detection (rules + semantic)
+
+Vector DB for scalable image/doc retrieval
+
+MobileNet/EfficientNet for audio classifier
+
+Dockerize/CI for services
+
+iOS support, push notifications, multilingual UI
+
+🤝 Contributing
+
+Fork
+
+Create feature branch
+
+Commit + push
+
+PR with tests + docs updates
+
+📄 License
+
+MIT (recommended). Include a LICENSE file.
+
+🔗 Repositories
+
+Kintsugi (Flutter): https://github.com/AryanSaxenaa/KintsugiNew
+
+RAG Chatbot: https://github.com/Anvit25/LLM_chatbot2
+
+(Add orchestrator / classifier repos when you publish them)
+
+🆘 Support
+
+Email: support@kintsugi.app
+
+GitHub Issues (Kintsugi): https://github.com/AryanSaxenaa/KintsugiNew/issues
