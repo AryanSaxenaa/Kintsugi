@@ -320,7 +320,7 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 ### 1. RAG Samsung Manual Chatbot
 
 <p align="center">
-  <img src="assets/images/rag_manual.png" alt="RAG Samsung Manual Chatbot architecture" width="800">
+  <img src="assets/app-images/rag_manual.png" alt="RAG Samsung Manual Chatbot architecture" width="800">
 </p>
 
 - **Input:** User query (text)  
@@ -335,7 +335,7 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 ### 2. Multi-Modal Orchestrator
 
 <p align="center">
-  <img src="assets/images/multimodal_orchestrator.png" alt="Multi-Modal Orchestrator flow" width="800">
+  <img src="assets/app-images/multimodal_orchestrator.png" alt="Multi-Modal Orchestrator flow" width="800">
 </p>
 
 - **Intent Classification:** Rule-based (`intents.json`)  
@@ -352,7 +352,7 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 ### 3. Image Color Classifier
 
 <p align="center">
-  <img src="assets/images/image_color_classifier.png" alt="Image Color Classifier pipeline" width="800">
+  <img src="assets/app-images/image_color_classifier.png" alt="Image Color Classifier pipeline" width="800">
 </p>
 
 - **Pipeline:**  
@@ -373,7 +373,7 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 ### 4. Hierarchical Audio Classifier
 
 <p align="center">
-  <img src="assets/images/audio_classifier.png" alt="Hierarchical Audio Classifier stages" width="800">
+  <img src="assets/app-images/audio_classifier.png" alt="Hierarchical Audio Classifier stages" width="800">
 </p>
 
 - **Stage 1 (Coarse):** Normal vs Abnormal detection (CNN on spectrograms)  
