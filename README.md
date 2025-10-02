@@ -280,6 +280,122 @@ flutter run
 - Check available storage space
 - Ensure proper image picker permissions
 
+## 🔬 Integrated AI Backends
+
+Kintsugi integrates four AI services to power advanced diagnostics:  
+- **RAG Samsung Manual Chatbot** (document QA)  
+- **Multi-Modal Orchestrator** (text/image/audio handling)  
+- **Image Color Classifier** (visual rust/zinc detection)  
+- **Hierarchical Audio Classifier** (washing machine sound anomaly detection)
+
+---
+
+### 📊 Models at a Glance
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/images/rag_manual.png" alt="RAG Samsung Manual Chatbot" width="100%"><br/>
+      <sub><b>RAG Samsung Manual Chatbot</b><br/>LangChain + Chroma + FLAN-T5</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/images/multimodal_orchestrator.png" alt="Multi-Modal Orchestrator" width="100%"><br/>
+      <sub><b>Multi-Modal Orchestrator</b><br/>Text / Image / Audio + Groq summaries</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/images/image_color_classifier.png" alt="Image Color Classifier" width="100%"><br/>
+      <sub><b>Image Color Classifier</b><br/>CIELab heuristics + K-Means palette</sub>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/images/audio_classifier.png" alt="Hierarchical Audio Classifier" width="100%"><br/>
+      <sub><b>Hierarchical Audio Classifier</b><br/>2-stage CNN on Mel-Spectrograms</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+### 1. RAG Samsung Manual Chatbot
+
+<p align="center">
+  <img src="assets/images/rag_manual.png" alt="RAG Samsung Manual Chatbot architecture" width="800">
+</p>
+
+- **Input:** User query (text)  
+- **Retriever:** ChromaDB (k=2 chunks per query)  
+- **Embeddings:** `all-MiniLM-L6-v2` (Sentence Transformers)  
+- **LLM Generator:** `flan-t5-base` (Hugging Face pipeline)  
+- **Memory:** Conversational buffer for multi-turn Q&A  
+- **Use case:** Ask questions like *“How do I reset my Samsung washing machine?”* and get grounded answers directly from the manual.
+
+---
+
+### 2. Multi-Modal Orchestrator
+
+<p align="center">
+  <img src="assets/images/multimodal_orchestrator.png" alt="Multi-Modal Orchestrator flow" width="800">
+</p>
+
+- **Intent Classification:** Rule-based (`intents.json`)  
+  - `"chat"` → Send to chatbot client  
+  - `"search_local_image"` → Run semantic image search  
+  - `"request_image_analysis"` → Vision client + Groq summary  
+  - `"request_audio_analysis"` → Audio client + Groq summary  
+- **Semantic Image Search:** Embeddings + cosine similarity (threshold 0.4)  
+- **Image/Audio Analysis:** AI models → JSON → Summarized by Groq (Llama-3.3-70B)  
+- **Conversation Management:** Maintains chat history across text, image, audio  
+
+---
+
+### 3. Image Color Classifier
+
+<p align="center">
+  <img src="assets/images/image_color_classifier.png" alt="Image Color Classifier pipeline" width="800">
+</p>
+
+- **Pipeline:**  
+  1. Input image → convert to Lab color space  
+  2. Compute medians (a*, b*) → thresholds with Δ=6.0  
+  3. Ratios:  
+     - `rustish_ratio = mean(a* > a_thr)`  
+     - `zincish_ratio = mean(b* > b_thr)`  
+  4. Rule-based classification:  
+     - zinc > threshold → **Zinc**  
+     - rust > threshold → **Rust**  
+     - else → **Normal**  
+- **Extras:** K-Means palette (k=3) for dominant colors  
+- **Output:** JSON with class label, ratios, and palette  
+
+---
+
+### 4. Hierarchical Audio Classifier
+
+<p align="center">
+  <img src="assets/images/audio_classifier.png" alt="Hierarchical Audio Classifier stages" width="800">
+</p>
+
+- **Stage 1 (Coarse):** Normal vs Abnormal detection (CNN on spectrograms)  
+- **Stage 2 (Fine):**  
+  - If Normal → classify mode (Wash, Spin, etc.)  
+  - If Abnormal → classify anomaly (e.g., Bearing noise, Dehydration noise)  
+- **Preprocessing:**  
+  - .wav audio → log-Mel spectrogram (224×224)  
+  - Params: sr=22050, n_fft=2048, hop=512, n_mels=128  
+- **Architecture:**  
+  - CNN backbone (Conv2D + ReLU + MaxPooling ×3 → Dense → Dropout → Softmax)  
+- **Artifacts:**  
+  - `stage1_model.h5`  
+  - `normal_model.h5`  
+  - `abnormal_model.h5`  
+  - `label_meta.json` (class mapping)  
+
+---
+
+
+
+
 ## 🔄 Version History
 
 ### v1.0.0 (Current)
