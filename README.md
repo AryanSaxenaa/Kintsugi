@@ -295,21 +295,21 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/images/rag_manual.png" alt="RAG Samsung Manual Chatbot" width="100%"><br/>
+      <img src="assets/app-images/rag_manual.png" alt="RAG Samsung Manual Chatbot" width="100%"><br/>
       <sub><b>RAG Samsung Manual Chatbot</b><br/>LangChain + Chroma + FLAN-T5</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/images/multimodal_orchestrator.png" alt="Multi-Modal Orchestrator" width="100%"><br/>
+      <img src="assets/app-images/multimodal_orchestrator.png" alt="Multi-Modal Orchestrator" width="100%"><br/>
       <sub><b>Multi-Modal Orchestrator</b><br/>Text / Image / Audio + Groq summaries</sub>
     </td>
   </tr>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/images/image_color_classifier.png" alt="Image Color Classifier" width="100%"><br/>
+      <img src="assets/app-images/image_color_classifier.png" alt="Image Color Classifier" width="100%"><br/>
       <sub><b>Image Color Classifier</b><br/>CIELab heuristics + K-Means palette</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/images/audio_classifier.png" alt="Hierarchical Audio Classifier" width="100%"><br/>
+      <img src="assets/app-images/audio_classifier.png" alt="Hierarchical Audio Classifier" width="100%"><br/>
       <sub><b>Hierarchical Audio Classifier</b><br/>2-stage CNN on Mel-Spectrograms</sub>
     </td>
   </tr>
