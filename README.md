@@ -296,11 +296,11 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/app-images/connections.png" alt="Kintsugi App Architecture" width="100%"><br/>
+      <img src="assets/app-images/connections.jpg" alt="Kintsugi App Architecture" width="100%"><br/>
       <sub><b>Kintsugi App Architecture</b><br/>Flutter Frontend + AI Service Integration</sub>
     </td>
     <td align="center" width="50%">
-      <img src="assets/app-images/screenshot.png" alt="Multi-Modal Orchestrator" width="100%"><br/>
+      <img src="assets/app-images/screenshotjpg" alt="Multi-Modal Orchestrator" width="100%"><br/>
       <sub><b>Multi-Modal Orchestrator</b><br/>Text / Image / Audio Routing + Groq Summaries</sub>
     </td>
   </tr>
