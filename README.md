@@ -322,6 +322,9 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 - **Memory:** Conversational buffer for multi-turn Q&A  
 - **Use case:** Ask questions like *“How do I reset my Samsung washing machine?”* and get grounded answers directly from the manual.
 
+
+[Check out the model](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)
+
 ---
 
 ### 2. Multi-Modal Orchestrator
@@ -337,7 +340,10 @@ Kintsugi integrates four AI services to power advanced diagnostics:
   - `"request_audio_analysis"` → Audio client + Groq summary  
 - **Semantic Image Search:** Embeddings + cosine similarity (threshold 0.4)  
 - **Image/Audio Analysis:** AI models → JSON → Summarized by Groq (Llama-3.3-70B)  
-- **Conversation Management:** Maintains chat history across text, image, audio  
+- **Conversation Management:** Maintains chat history across text, image, audio
+
+[Check out the model](https://huggingface.co/spaces/Anvit25/Orchestrator_final)
+
 
 ---
 
@@ -358,7 +364,10 @@ Kintsugi integrates four AI services to power advanced diagnostics:
      - rust > threshold → **Rust**  
      - else → **Normal**  
 - **Extras:** K-Means palette (k=3) for dominant colors  
-- **Output:** JSON with class label, ratios, and palette  
+- **Output:** JSON with class label, ratios, and palette
+
+
+[Check out the model](https://huggingface.co/spaces/Anvit25/vision-classifier)
 
 ---
 
@@ -381,7 +390,9 @@ Kintsugi integrates four AI services to power advanced diagnostics:
   - `stage1_model.h5`  
   - `normal_model.h5`  
   - `abnormal_model.h5`  
-  - `label_meta.json` (class mapping)  
+  - `label_meta.json` (class mapping)
+
+[Check out the model](https://huggingface.co/spaces/Anvit25/new_audio)
 
 ---
 
