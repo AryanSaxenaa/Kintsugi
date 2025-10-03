@@ -457,19 +457,15 @@ For support, please contact:
 ## 📋 Submissions
 
 ### 📹 Video Demonstrations
-*Please add your video URLs below when available:*
 
 - **App Demo Video**: [Add URL here]
 - **Feature Walkthrough**: [Add URL here]
 - **Technical Overview**: [Add URL here]
 
 ### 📚 Additional Resources
-*Add any additional project resources:*
 
 - **Live Demo**: [Add URL here]
-- **Documentation**: [Add URL here]
 - **Presentation Slides**: [Add URL here]
-- **Technical Specifications**: [Add URL here]
 
 ### 🔗 Repository Links
 - **Main Repository**: [https://github.com/AryanSaxenaa/KintsugiNew](https://github.com/AryanSaxenaa/KintsugiNew)
