@@ -321,6 +321,8 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 - **LLM Generator:** `flan-t5-base` (Hugging Face pipeline)  
 - **Memory:** Conversational buffer for multi-turn Q&A  
 - **Use case:** Ask questions like *“How do I reset my Samsung washing machine?”* and get grounded answers directly from the manual.
+
+
 [Check out the model](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)
 
 ---
@@ -385,7 +387,8 @@ Kintsugi integrates four AI services to power advanced diagnostics:
   - `stage1_model.h5`  
   - `normal_model.h5`  
   - `abnormal_model.h5`  
-  - `label_meta.json` (class mapping)  
+  - `label_meta.json` (class mapping)
+  -
 [Check out the model](https://huggingface.co/spaces/Anvit25/new_audio)
 ---
 
