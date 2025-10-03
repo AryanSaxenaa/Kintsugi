@@ -390,6 +390,7 @@ Kintsugi integrates four AI services to power advanced diagnostics:
   - `label_meta.json` (class mapping)
 
 [Check out the model](https://huggingface.co/spaces/Anvit25/new_audio)
+
 ---
 
 
