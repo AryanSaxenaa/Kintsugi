@@ -365,7 +365,10 @@ Kintsugi integrates four AI services to power advanced diagnostics:
      - else → **Normal**  
 - **Extras:** K-Means palette (k=3) for dominant colors  
 - **Output:** JSON with class label, ratios, and palette
+
+
 [Check out the model](https://huggingface.co/spaces/Anvit25/vision-classifier)
+
 ---
 
 ### 4. Hierarchical Audio Classifier
