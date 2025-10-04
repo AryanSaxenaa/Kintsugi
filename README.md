@@ -369,7 +369,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 ### 3. Image Color Classifier
 
 <p align="center">
-  <img width="633" height="554" alt="Image Color Classifier Interface" src="https://github.com/user-attachments/assets/image_color_classifier.png" />
+  <img width="633" height="554" alt="Image Color Classifier Interface" src="assets/app-images/image_color_classifier.png"/>
 </p>
 
 - **Processing Pipeline**:  
