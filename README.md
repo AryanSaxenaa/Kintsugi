@@ -342,7 +342,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Use case:** Ask questions like *“How do I reset my Samsung washing machine?”* and get grounded answers directly from the manual.
 
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)**
+**[Check out the model on Huggingface Made by Kintsugi team](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)**
 
 ---
 
@@ -361,7 +361,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Image/Audio Analysis**: AI models → JSON → Summarized by Groq (Llama-3.3-70B)  
 - **Conversation Management**: Maintains chat history across text, image, and audio modalities
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/Orchestrator_final)**
+**[Check out the model on Huggingface Made by Kintsugi team](https://huggingface.co/spaces/Anvit25/Orchestrator_final)**
 
 
 ---
@@ -385,7 +385,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Additional Features**: K-Means palette (k=3) for dominant color analysis  
 - **Output Format**: JSON with class label, ratios, and color palette
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/vision-classifier)**
+**[Check out the model on Huggingface Made by Kintsugi team](https://huggingface.co/spaces/Anvit25/vision-classifier)**
 
 ---
 
@@ -410,7 +410,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
   - `abnormal_model.h5`  
   - `label_meta.json` (class mapping)
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/new_audio)**
+**[Check out the model on Huggingface Made by Kintsugi team](https://huggingface.co/spaces/Anvit25/new_audio)**
 
 ---
 
@@ -428,6 +428,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 -  Android platform compatibility
 
 ### Future Development Roadmap
+-  Expand to support other electronics
 -  Speech-to-text integration capabilities
 -  Enhanced artificial intelligence diagnostic features
 -  Real-time database integration
@@ -486,13 +487,12 @@ This section contains all relevant project submission materials, including demon
 
 
 #### Code Repositories and Downloads
-- **Primary Repository**: [https://github.com/AryanSaxenaa/KintsugiNew](https://github.com/AryanSaxenaa/Kintsugi)
-- **Orchestrator**: [https://huggingface.co/spaces/Anvit25/Orchestrator_final]
+- **Primary Repository**: [https://github.com/AryanSaxenaa/Kintsugi]
+-  **Orchestrator**: [https://huggingface.co/spaces/Anvit25/Orchestrator_final]
 - **Audio Recording Functionality**: [https://huggingface.co/spaces/Anvit25/new_audio]
 - **Image Processing Capabilities**: [https://huggingface.co/spaces/Anvit25/vision-classifier]
 - **LLM Chatbot**: [https://huggingface.co/spaces/Anvit25/LLM_chatbot2]
 
-- **Issue Tracking**: [https://github.com/AryanSaxenaa/KintsugiNew/issues](https://github.com/AryanSaxenaa/Kintsugi/issues)
 
 #### Additional Materials
 - **Setup Guide**: [SETUP_GUIDE.md](SETUP_GUIDE.md)
@@ -507,5 +507,5 @@ This section contains all relevant project submission materials, including demon
 <div align="center">
   <h3>Project Development Information</h3>
   <p>Developed with dedication for Samsung washing machine users worldwide</p>
-  <p><strong>Kintsugi - Transforming Diagnostic Challenges into Solutions</strong></p>
+  <p><strong>Kintsugi</strong></p>
 </div>
