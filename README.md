@@ -455,7 +455,7 @@ We welcome and encourage contributions to enhance the Kintsugi application. Plea
 
 ## License
 
-This project is licensed under the MIT License. Please refer to the [LICENSE](LICENSE) file for detailed terms and conditions.
+This project is licensed under the MIT License. Please refer to the [https://drive.google.com/file/d/1thqCkaDxxV4KeUlrjxdAw51UxnvaC6_x/view?usp=sharing](LICENSE) file for detailed terms and conditions.
 
 ## Technical Support and Contact Information
 
