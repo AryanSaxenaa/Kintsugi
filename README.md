@@ -342,7 +342,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Use case:** Ask questions like *“How do I reset my Samsung washing machine?”* and get grounded answers directly from the manual.
 
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)**
 
 ---
 
@@ -361,7 +361,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Image/Audio Analysis**: AI models → JSON → Summarized by Groq (Llama-3.3-70B)  
 - **Conversation Management**: Maintains chat history across text, image, and audio modalities
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/Orchestrator_final)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/Orchestrator_final)**
 
 
 ---
@@ -385,7 +385,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Additional Features**: K-Means palette (k=3) for dominant color analysis  
 - **Output Format**: JSON with class label, ratios, and color palette
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/vision-classifier)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/vision-classifier)**
 
 ---
 
@@ -410,7 +410,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
   - `abnormal_model.h5`  
   - `label_meta.json` (class mapping)
 
-**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/new_audio)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/new_audio)**
 
 ---
 
