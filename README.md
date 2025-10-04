@@ -1,14 +1,5 @@
 # Kintsugi - Washing Machine Diagnostic App
-
-<div align="center">
-  <img src="assets/app-images/washing-machine.png" alt="Kintsugi Logo" width="200"/>
-  
-  [![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)](https://flutter.dev/)
-  [![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
-  [![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://android.com/)
-</div>
 <img width="1495" height="1263" alt="image" src="https://github.com/user-attachments/assets/ea96985d-44b5-4936-bd96-6515d778bff0" />
-<img width="1494" height="1263" alt="image" src="https://github.com/user-attachments/assets/e2883fda-7c95-4a65-9bb7-7b0f5f83816f" />
 
 ## 📱 About
 
