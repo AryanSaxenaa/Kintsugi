@@ -156,7 +156,7 @@ The application requires the following system permissions (managed automatically
 - Optimal for documenting error codes, machine conditions, and problematic areas
 
 ### Service Escalation Process
-- Access the escalation function (⚠️) from the application toolbar
+- Access the escalation function from the application toolbar
 - Complete the service request form with the following information:
   - Detailed issue description
   - Customer contact information
@@ -342,7 +342,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Use case:** Ask questions like *“How do I reset my Samsung washing machine?”* and get grounded answers directly from the manual.
 
 
-[Check out the model](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/LLM_chatbot2)
 
 ---
 
@@ -361,7 +361,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Image/Audio Analysis**: AI models → JSON → Summarized by Groq (Llama-3.3-70B)  
 - **Conversation Management**: Maintains chat history across text, image, and audio modalities
 
-[Access the model](https://huggingface.co/spaces/Anvit25/Orchestrator_final)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/Orchestrator_final)
 
 
 ---
@@ -385,7 +385,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Additional Features**: K-Means palette (k=3) for dominant color analysis  
 - **Output Format**: JSON with class label, ratios, and color palette
 
-[Access the model](https://huggingface.co/spaces/Anvit25/vision-classifier)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/vision-classifier)
 
 ---
 
@@ -410,7 +410,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
   - `abnormal_model.h5`  
   - `label_meta.json` (class mapping)
 
-[Access the model](https://huggingface.co/spaces/Anvit25/new_audio)
+**[Check out the model on Huggingface](https://huggingface.co/spaces/Anvit25/new_audio)
 
 ---
 
@@ -420,20 +420,20 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 ## Release Information and Version History
 
 ### Current Release v1.0.0
-- ✅ Complete chat functionality implementation
-- ✅ Audio recording with WAV format support
-- ✅ Image attachment system with automatic compression
-- ✅ Static escalation system implementation
-- ✅ Samsung-branded user interface design
-- ✅ Android platform compatibility
+-  Complete chat functionality implementation
+-  Audio recording with WAV format support
+-  Image attachment system with automatic compression
+-  Static escalation system implementation
+-  Samsung-branded user interface design
+-  Android platform compatibility
 
 ### Future Development Roadmap
-- 🔮 Speech-to-text integration capabilities
-- 🔮 Enhanced artificial intelligence diagnostic features
-- 🔮 Real-time database integration
-- 🔮 Push notification system for service updates
-- 🔮 Multi-language support implementation
-- 🔮 iOS platform compatibility
+-  Speech-to-text integration capabilities
+-  Enhanced artificial intelligence diagnostic features
+-  Real-time database integration
+-  Push notification system for service updates
+-  Multi-language support implementation
+-  iOS platform compatibility
 
 ## Contributing to the Project
 
@@ -459,16 +459,7 @@ This project is licensed under the MIT License. Please refer to the [LICENSE](LI
 ## Technical Support and Contact Information
 
 For technical support and inquiries, please utilize the following communication channels:
-- **Email Support**: [support@kintsugi.app](mailto:support@kintsugi.app)
 - **GitHub Issues**: [Submit an issue](https://github.com/AryanSaxenaa/KintsugiNew/issues)
-- **Documentation**: [Project Wiki](https://github.com/AryanSaxenaa/KintsugiNew/wiki)
-
-## Acknowledgments and Credits
-
-- Flutter development team for providing the comprehensive framework
-- Samsung for design inspiration and brand guidelines
-- Open source community for valuable package contributions
-- Project contributors and testing community
 
 ---
 
@@ -479,9 +470,8 @@ This section contains all relevant project submission materials, including demon
 ### Video Demonstrations
 
 #### Application Demonstration Videos
-- **Complete Application Demo**: [Project demonstration video URL]
-- **Feature Walkthrough**: [Detailed feature demonstration URL]
-- **Technical Architecture Overview**: [Technical implementation overview URL]
+- **Complete Application Demo**: [https://drive.google.com/file/d/1zL5a_xSfD04qAJAcWa1dCmNASkftd7Xt/view?usp=sharing]
+- **Technical Architecture Overview**: [https://github.com/AryanSaxenaa/Kintsugi/blob/readme/Kintsugi.pdf]
 
 #### Specialized Feature Demonstrations
 - **AI Integration Showcase**: [AI service integration demonstration URL]
@@ -497,19 +487,16 @@ This section contains all relevant project submission materials, including demon
 - **User Manual**: [Comprehensive user guide URL]
 
 #### Code Repositories and Downloads
-- **Primary Repository**: [https://github.com/AryanSaxenaa/KintsugiNew](https://github.com/AryanSaxenaa/KintsugiNew)
-- **Release Downloads**: [Latest release download URL]
-- **Issue Tracking**: [https://github.com/AryanSaxenaa/KintsugiNew/issues](https://github.com/AryanSaxenaa/KintsugiNew/issues)
+- **Primary Repository**: [https://github.com/AryanSaxenaa/KintsugiNew](https://github.com/AryanSaxenaa/Kintsugi)
+- **Issue Tracking**: [https://github.com/AryanSaxenaa/KintsugiNew/issues](https://github.com/AryanSaxenaa/Kintsugi/issues)
 
 #### Additional Materials
 - **Setup Guide**: [SETUP_GUIDE.md](SETUP_GUIDE.md)
 - **Requirements Specification**: [requirements.txt](requirements.txt)
-- **Architecture Diagrams**: [Technical architecture documentation URL]
+- **Architecture Diagrams**: [https://github.com/AryanSaxenaa/Kintsugi/blob/readme/Kintsugi.pdf]
 
 ### Academic and Research Materials
-- **Research Paper**: [Academic research paper URL]
-- **Case Study Documentation**: [Detailed case study URL]
-- **Performance Analysis**: [System performance analysis URL]
+- **Research Paper**: [https://dl.acm.org/doi/10.1145/3297156.3297186]
 
 ---
 
