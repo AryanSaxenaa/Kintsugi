@@ -350,7 +350,7 @@ Kintsugi integrates four AI services to power advanced diagnostics:
 ### 3. Image Color Classifier
 
 <p align="center">
-  <img src="assets/app-images/image_color_classifier.png" alt="Image Color Classifier pipeline" width="800">
+  <img width="633" height="554" alt="image" src="https://github.com/user-attachments/assets/9c22fc8f-485c-4cbf-97b6-b4564569ee6c" />
 </p>
 
 - **Pipeline:**  
