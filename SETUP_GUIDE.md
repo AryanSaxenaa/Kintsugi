@@ -1,9 +1,9 @@
-# 🚀 Kintsugi Setup Guide
-**Complete Development Environment Setup for Samsung Washing Machine Diagnostic Assistant**
+# Kintsugi Development Environment Setup Guide
+**Complete Development Environment Configuration for Samsung Washing Machine Diagnostic Assistant**
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Quick Start](#quick-start)
 2. [Prerequisites](#prerequisites)
@@ -11,36 +11,36 @@
 4. [Project Setup](#project-setup)
 5. [IDE Configuration](#ide-configuration)
 6. [Android Setup](#android-setup)
-7. [Running the App](#running-the-app)
+7. [Running the Application](#running-the-application)
 8. [Troubleshooting](#troubleshooting)
 9. [Advanced Configuration](#advanced-configuration)
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
-**For experienced developers:**
+**For experienced developers with existing Flutter development environments:**
 
 ```bash
-# 1. Install Flutter 3.13.0+
-# 2. Clone repository
+# 1. Install Flutter 3.13.0 or higher
+# 2. Clone the repository
 git clone https://github.com/AryanSaxenaa/KintsugiNew.git
 cd Kintsugi
 
-# 3. Install dependencies
+# 3. Install project dependencies
 flutter pub get
 
-# 4. Run the app
+# 4. Execute the application
 flutter run
 ```
 
-**Demo Credentials:**
-- Email: `user@demo.com`
+**Demonstration Credentials:**
+- Email Address: `user@demo.com`
 - Password: `demo123`
 
 ---
 
-## 📚 Prerequisites
+## Prerequisites
 
 ### System Requirements
 
@@ -60,20 +60,20 @@ flutter run
 
 ---
 
-## 🎯 Flutter Installation
+## Flutter Installation
 
 ### Windows Installation
 
 1. **Download Flutter SDK**
-   - Visit [flutter.dev/docs/get-started/install/windows](https://flutter.dev/docs/get-started/install/windows)
-   - Download the latest stable Flutter SDK (3.13.0+)
-   - Extract to `C:\flutter` (avoid paths with spaces)
+   - Navigate to [flutter.dev/docs/get-started/install/windows](https://flutter.dev/docs/get-started/install/windows)
+   - Download the latest stable Flutter SDK (version 3.13.0 or higher)
+   - Extract to `C:\flutter` (avoid directory paths containing spaces)
 
-2. **Add Flutter to PATH**
+2. **Configure Flutter PATH Environment Variable**
    ```powershell
    # Add to System Environment Variables
-   # Variable: PATH
-   # Value: C:\flutter\bin
+   # Variable Name: PATH
+   # Variable Value: C:\flutter\bin
    ```
 
 3. **Verify Installation**
@@ -84,7 +84,7 @@ flutter run
 
 ### macOS Installation
 
-1. **Install using Homebrew (Recommended)**
+1. **Installation using Homebrew (Recommended Method)**
    ```bash
    # Install Homebrew if not already installed
    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -93,13 +93,13 @@ flutter run
    brew install --cask flutter
    ```
 
-2. **Manual Installation**
+2. **Manual Installation Procedure**
    ```bash
    # Download and extract Flutter SDK
    cd ~/development
    unzip ~/Downloads/flutter_macos_3.13.0-stable.zip
    
-   # Add to PATH in ~/.zshrc or ~/.bash_profile
+   # Configure PATH in ~/.zshrc or ~/.bash_profile
    export PATH="$PATH:`pwd`/flutter/bin"
    ```
 
@@ -111,14 +111,14 @@ cd ~/development
 wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.13.0-stable.tar.xz
 tar xf flutter_linux_3.13.0-stable.tar.xz
 
-# Add to PATH in ~/.bashrc
+# Configure PATH in ~/.bashrc
 export PATH="$PATH:`pwd`/flutter/bin"
 
 # Reload shell configuration
 source ~/.bashrc
 ```
 
-### Verify Flutter Installation
+### Flutter Installation Verification
 
 ```bash
 flutter doctor -v
@@ -138,63 +138,63 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 ---
 
-## 📱 Android Setup
+## Android Development Environment Setup
 
-### Install Android Studio
+### Android Studio Installation
 
 1. **Download Android Studio**
-   - Visit [developer.android.com/studio](https://developer.android.com/studio)
-   - Download the latest version
-   - Install with default settings
+   - Navigate to [developer.android.com/studio](https://developer.android.com/studio)
+   - Download the latest stable version
+   - Install using default configuration settings
 
-2. **Install Android SDK**
-   - Open Android Studio
-   - Go to **File > Settings > Appearance & Behavior > System Settings > Android SDK**
-   - Install the following:
-     - **Android API 34** (latest)
-     - **Android API 21** (minimum required)
+2. **Android SDK Installation**
+   - Launch Android Studio
+   - Navigate to **File > Settings > Appearance & Behavior > System Settings > Android SDK**
+   - Install the following components:
+     - **Android API 34** (latest stable version)
+     - **Android API 21** (minimum required version)
      - **Android SDK Build-Tools 34.0.0**
      - **Android SDK Platform-Tools**
 
-3. **Create Android Virtual Device (AVD)**
+3. **Android Virtual Device (AVD) Configuration**
    - Open **AVD Manager** in Android Studio
-   - Click **Create Virtual Device**
-   - Select **Pixel 7** or similar modern device
-   - Choose **API Level 34** system image
-   - Configure with **4GB RAM** and **6GB internal storage**
+   - Select **Create Virtual Device**
+   - Choose **Pixel 7** or equivalent modern device profile
+   - Select **API Level 34** system image
+   - Configure device with **4GB RAM** and **6GB internal storage**
 
-### Accept Android Licenses
+### Android License Acceptance
 
 ```bash
 flutter doctor --android-licenses
 ```
 
-Type `y` to accept all licenses.
+Type `y` to accept all required licenses.
 
 ---
 
-## 🔧 Project Setup
+## Project Setup and Configuration
 
-### 1. Clone the Repository
+### 1. Repository Cloning
 
 ```bash
-# Using HTTPS
+# Using HTTPS protocol
 git clone https://github.com/AryanSaxenaa/KintsugiNew.git
 
-# Using SSH (if configured)
+# Using SSH protocol (if configured)
 git clone git@github.com:AryanSaxenaa/KintsugiNew.git
 
 # Navigate to project directory
 cd Kintsugi
 ```
 
-### 2. Install Dependencies
+### 2. Dependency Installation
 
 ```bash
 # Install Flutter packages
 flutter pub get
 
-# Verify dependencies
+# Verify dependency installation
 flutter pub deps
 ```
 
@@ -228,43 +228,43 @@ flutter:
 
 ---
 
-## 💻 IDE Configuration
+## Integrated Development Environment Configuration
 
-### Android Studio Setup
+### Android Studio Configuration
 
-1. **Install Flutter Plugin**
-   - Go to **File > Settings > Plugins**
-   - Search for "Flutter" and install
-   - Restart Android Studio
+1. **Flutter Plugin Installation**
+   - Navigate to **File > Settings > Plugins**
+   - Search for "Flutter" and install the plugin
+   - Restart Android Studio to complete installation
 
-2. **Import Project**
-   - **File > Open**
-   - Select the `Kintsugi` folder
-   - Wait for indexing to complete
+2. **Project Import**
+   - Select **File > Open**
+   - Choose the `Kintsugi` project folder
+   - Wait for project indexing to complete
 
-3. **Configure Flutter SDK Path**
-   - **File > Settings > Languages & Frameworks > Flutter**
-   - Set Flutter SDK path (e.g., `C:\flutter` on Windows)
+3. **Flutter SDK Path Configuration**
+   - Navigate to **File > Settings > Languages & Frameworks > Flutter**
+   - Configure Flutter SDK path (e.g., `C:\flutter` on Windows)
 
-### VS Code Setup
+### Visual Studio Code Configuration
 
-1. **Install Extensions**
+1. **Required Extension Installation**
    ```bash
-   # Install Flutter extension (includes Dart)
+   # Install Flutter extension (includes Dart support)
    code --install-extension Dart-Code.flutter
    
-   # Optional: Useful extensions
+   # Optional: Additional useful extensions
    code --install-extension ms-vscode.vscode-json
    code --install-extension bradlc.vscode-tailwindcss
    ```
 
-2. **Open Project**
+2. **Project Opening**
    ```bash
    cd Kintsugi
    code .
    ```
 
-3. **Configure Settings**
+3. **Workspace Settings Configuration**
    Create `.vscode/settings.json`:
    ```json
    {
@@ -276,7 +276,7 @@ flutter:
 
 ---
 
-## 🚀 Running the App
+## Application Execution
 
 ### 1. Check Connected Devices
 
@@ -298,25 +298,25 @@ Chrome (web)                • chrome        • web-javascript • Google Chro
 - Open **AVD Manager**
 - Click ▶️ next to your virtual device
 
-**From Command Line:**
+**From Command Line Interface:**
 ```bash
-# List available emulators
+# List available emulator configurations
 flutter emulators
 
-# Start specific emulator
+# Launch specific emulator instance
 flutter emulators --launch <emulator_id>
 ```
 
-### 3. Run the Application
+### 3. Application Execution
 
 ```bash
-# Debug mode (default)
+# Debug mode (default configuration)
 flutter run
 
 # Release mode (optimized performance)
 flutter run --release
 
-# Specific device
+# Target specific device
 flutter run -d <device_id>
 
 # Hot reload during development
@@ -324,79 +324,79 @@ flutter run -d <device_id>
 # Press 'R' for hot restart
 ```
 
-### 4. First App Launch
+### 4. Initial Application Launch Sequence
 
 1. **Splash Screen** - Samsung branding with loading animation
-2. **Onboarding** - Feature introduction with washing machine images
-3. **Login Screen** - Use demo credentials:
+2. **Onboarding Process** - Feature introduction with washing machine imagery
+3. **Authentication Screen** - Use demonstration credentials:
    - Email: `user@demo.com`
    - Password: `demo123`
-4. **Chat Interface** - Main diagnostic screen
+4. **Chat Interface** - Primary diagnostic interaction screen
 
 ---
 
-## 🔍 Testing the App Features
+## Application Feature Testing
 
-### Chat Interface Testing
+### Chat Interface Verification
 
-1. **Text Messages**
-   - Type various washing machine issues
-   - Verify chat bubbles display correctly
+1. **Text Message Functionality**
+   - Input various washing machine operational issues
+   - Verify chat bubble display formatting
 
-2. **Image Attachments**
-   - Tap attachment button (📎)
-   - Select "Camera" → Take a photo
-   - Select "Gallery" → Choose existing image
-   - Verify image compression (should be < 2MB)
+2. **Image Attachment Capabilities**
+   - Access attachment functionality
+   - Select "Camera" option and capture a photograph
+   - Select "Gallery" option and choose existing image
+   - Verify image compression (file size should be < 2MB)
 
-3. **Audio Recording**
-   - Tap attachment button (📎)
-   - Select "Audio Recording"
-   - Record washing machine sounds (5-30 seconds)
-   - Verify WAV file creation
+3. **Audio Recording Functionality**
+   - Access attachment functionality
+   - Select "Audio Recording" option
+   - Record washing machine operational sounds (recommended duration: 5-30 seconds)
+   - Verify WAV file creation and storage
 
-4. **Escalation System**
-   - Tap escalation button (⚠️) in app bar
-   - Fill out service request form
-   - Submit and verify ticket generation
+4. **Escalation System Verification**
+   - Access escalation functionality in application toolbar
+   - Complete service request form with required information
+   - Submit form and verify ticket generation
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting and Problem Resolution
 
-### Common Issues and Solutions
+### Common Issues and Resolution Procedures
 
-#### 1. Flutter Doctor Issues
+#### 1. Flutter Doctor Configuration Issues
 
-**Problem:** Red X marks in `flutter doctor`
+**Problem Description:** Red X indicators in `flutter doctor` output
 
-**Solutions:**
+**Resolution Procedures:**
 ```bash
-# Android toolchain issues
+# Android toolchain configuration issues
 flutter doctor --android-licenses
 
-# VS Code issues
+# Web development configuration issues
 flutter config --enable-web
 
-# Missing dependencies
+# Missing dependency resolution
 flutter clean
 flutter pub get
 ```
 
-#### 2. Build Failures
+#### 2. Build Process Failures
 
-**Problem:** Gradle build errors
+**Problem Description:** Gradle build error occurrences
 
-**Solutions:**
+**Resolution Procedures:**
 ```bash
-# Clean and rebuild
+# Clean and rebuild project
 flutter clean
 cd android
 ./gradlew clean
 cd ..
 flutter run
 
-# Update Gradle wrapper (if needed)
+# Update Gradle wrapper (if necessary)
 cd android
 ./gradlew wrapper --gradle-version=8.0
 ```
@@ -449,28 +449,28 @@ flutter run --verbose
 #### Check Specific Packages
 
 ```bash
-# Check specific dependency
+# Check specific dependency status
 flutter pub deps --style=compact
 
-# Upgrade packages
+# Upgrade package versions
 flutter pub upgrade --major-versions
 ```
 
-#### Performance Analysis
+#### Performance Analysis Procedures
 
 ```bash
-# Run with performance overlay
+# Execute with performance overlay
 flutter run --profile
 
-# Analyze app size
+# Analyze application size metrics
 flutter build apk --analyze-size
 ```
 
 ---
 
-## ⚙️ Advanced Configuration
+## Advanced Configuration Options
 
-### Custom Build Configurations
+### Custom Build Configuration
 
 #### Debug Build with Custom Parameters
 
@@ -478,21 +478,21 @@ flutter build apk --analyze-size
 flutter run --debug --dart-define=API_BASE_URL=https://dev-api.kintsugi.com
 ```
 
-#### Release Build Optimization
+#### Release Build Optimization Procedures
 
 ```bash
-# Build optimized APK
+# Build optimized APK for specific architecture
 flutter build apk --release --target-platform android-arm64
 
-# Build App Bundle for Play Store
+# Build App Bundle for Google Play Store distribution
 flutter build appbundle --release
 ```
 
-### Performance Optimization
+### Performance Optimization Configuration
 
-#### Enable R8 Code Shrinking (Android)
+#### Enable R8 Code Shrinking (Android Platform)
 
-Add to `android/app/build.gradle`:
+Add the following configuration to `android/app/build.gradle`:
 
 ```gradle
 android {
@@ -530,79 +530,79 @@ flutter drive --target=test_driver/app.dart
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources and Documentation
 
-### Official Documentation
+### Official Documentation Resources
 - [Flutter Documentation](https://flutter.dev/docs)
 - [Dart Language Guide](https://dart.dev/guides)
 - [Android Developer Guide](https://developer.android.com/guide)
 
-### Community Resources
+### Community Resources and Support
 - [Flutter Community](https://flutter.dev/community)
 - [Stack Overflow - Flutter](https://stackoverflow.com/questions/tagged/flutter)
 - [Reddit - r/FlutterDev](https://www.reddit.com/r/FlutterDev/)
 
-### Development Tools
+### Development Tools and Utilities
 - [Flutter Inspector](https://flutter.dev/docs/development/tools/flutter-inspector)
 - [Dart DevTools](https://dart.dev/tools/dart-devtools)
 - [Firebase Console](https://console.firebase.google.com/)
 
 ---
 
-## 🆘 Getting Help
+## Technical Support and Assistance
 
-### Project-Specific Support
+### Project-Specific Support Resources
 
-1. **Check the Issues**: [GitHub Issues](https://github.com/AryanSaxenaa/KintsugiNew/issues)
-2. **Create New Issue**: Use issue templates for bug reports or feature requests
-3. **Contact Support**: [support@kintsugi.app](mailto:support@kintsugi.app)
+1. **Review Existing Issues**: [GitHub Issues Repository](https://github.com/AryanSaxenaa/KintsugiNew/issues)
+2. **Submit New Issues**: Utilize issue templates for bug reports or feature requests
+3. **Direct Support Contact**: [support@kintsugi.app](mailto:support@kintsugi.app)
 
-### Flutter Community Support
+### Flutter Community Support Resources
 
-1. **Flutter Discord**: [discord.gg/flutter](https://discord.gg/flutter)
-2. **Flutter Slack**: Join the Flutter Slack workspace
-3. **Stack Overflow**: Tag questions with `flutter` and `dart`
+1. **Flutter Discord Community**: [discord.gg/flutter](https://discord.gg/flutter)
+2. **Flutter Slack Workspace**: Join the official Flutter Slack workspace
+3. **Stack Overflow**: Tag questions with `flutter` and `dart` for community assistance
 
 ---
 
-## ✅ Setup Checklist
+## Setup Verification Checklist
 
-### Before Development
+### Pre-Development Requirements
 
-- [ ] Flutter SDK 3.13.0+ installed and in PATH
-- [ ] Android Studio installed with Flutter plugin
-- [ ] Android SDK with API Level 21+ installed
-- [ ] Android device/emulator configured and running
-- [ ] `flutter doctor` shows all green checkmarks
-- [ ] Project cloned and dependencies installed
+- [ ] Flutter SDK version 3.13.0 or higher installed and configured in PATH
+- [ ] Android Studio installed with Flutter plugin integration
+- [ ] Android SDK with API Level 21 or higher installed
+- [ ] Android device or emulator configured and operational
+- [ ] `flutter doctor` command returns all green checkmarks
+- [ ] Project repository cloned and dependencies installed
 
-### First Run Verification
+### Initial Application Verification
 
-- [ ] App launches without errors
-- [ ] Splash screen displays correctly
-- [ ] Onboarding screens work properly
-- [ ] Login with demo credentials successful
-- [ ] Chat interface is responsive
-- [ ] Image attachments work (camera and gallery)
-- [ ] Audio recording functions properly
-- [ ] Escalation form submits successfully
-- [ ] Navigation between screens is smooth
+- [ ] Application launches without error conditions
+- [ ] Splash screen displays correctly with proper formatting
+- [ ] Onboarding screens function properly
+- [ ] Authentication with demonstration credentials successful
+- [ ] Chat interface responds appropriately to user input
+- [ ] Image attachment functionality operational (camera and gallery access)
+- [ ] Audio recording functionality operates correctly
+- [ ] Escalation form submission processes successfully
+- [ ] Navigation between application screens operates smoothly
 
-### Development Ready
+### Development Environment Readiness
 
-- [ ] IDE configured with Flutter extensions
-- [ ] Hot reload working
-- [ ] Debugging tools accessible
+- [ ] IDE configured with appropriate Flutter extensions
+- [ ] Hot reload functionality operational
+- [ ] Debugging tools accessible and functional
 - [ ] Code formatting and linting enabled
-- [ ] Version control (Git) set up
-- [ ] Test environment configured
+- [ ] Version control (Git) configured properly
+- [ ] Test environment configured and operational
 
 ---
 
-**🎉 Congratulations!** You've successfully set up the Kintsugi development environment. You're now ready to contribute to the Samsung washing machine diagnostic assistant!
+**Congratulations!** You have successfully configured the Kintsugi development environment. The system is now ready for contribution to the Samsung washing machine diagnostic assistant project.
 
-For any setup issues or questions, please refer to the troubleshooting section above or create an issue in the GitHub repository.
+For any configuration issues or technical questions, please refer to the troubleshooting section above or submit an issue in the GitHub repository.
 
 ---
 
-*Last updated: January 2025*
+*Document last updated: October 2025*
