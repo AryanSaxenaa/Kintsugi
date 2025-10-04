@@ -471,6 +471,8 @@ This section contains all relevant project submission materials, including demon
 ### Video Demonstrations
 
 #### Application Demonstration Videos
+https://github.com/user-attachments/assets/fbd3002d-30d7-4fa8-8b9a-447a57bc913f
+
 - **Complete Application Demo**: [https://drive.google.com/file/d/1zL5a_xSfD04qAJAcWa1dCmNASkftd7Xt/view?usp=sharing]
 - **Technical Architecture Overview**: [https://github.com/AryanSaxenaa/Kintsugi/blob/readme/Kintsugi.pdf]
 
