@@ -497,7 +497,7 @@ This section contains all relevant project submission materials, including demon
 #### Additional Materials
 - **Setup Guide**: [SETUP_GUIDE.md](SETUP_GUIDE.md)
 - **Requirements Specification**: [requirements.txt](requirements.txt)
-- **Architecture Diagrams**: [https://github.com/AryanSaxenaa/Kintsugi/blob/readme/Kintsugi.pdf]
+- **Architecture Diagrams**: [https://github.com/AryanSaxenaa/Kintsugi/blob/main/Kintsugi.pdf]
 
 ### Academic and Research Materials
 - **Research Paper**: [https://dl.acm.org/doi/10.1145/3297156.3297186]
