@@ -473,21 +473,25 @@ This section contains all relevant project submission materials, including demon
 - **Complete Application Demo**: [https://drive.google.com/file/d/1zL5a_xSfD04qAJAcWa1dCmNASkftd7Xt/view?usp=sharing]
 - **Technical Architecture Overview**: [https://github.com/AryanSaxenaa/Kintsugi/blob/readme/Kintsugi.pdf]
 
-#### Specialized Feature Demonstrations
-- **AI Integration Showcase**: [AI service integration demonstration URL]
-- **Audio Recording Functionality**: [Audio recording feature demonstration URL]
-- **Image Processing Capabilities**: [Image processing demonstration URL]
+#### Specialized Models Made by Kintsugi team 
+- **Orchestrator**: [https://huggingface.co/spaces/Anvit25/Orchestrator_final]
+- **Audio Recording Functionality**: [https://huggingface.co/spaces/Anvit25/new_audio]
+- **Image Processing Capabilities**: [https://huggingface.co/spaces/Anvit25/vision-classifier]
+- **LLM Chatbot**: [https://huggingface.co/spaces/Anvit25/LLM_chatbot2]
 
 ### Documentation and Resources
 
 #### Project Documentation
-- **Live Application Demo**: [Live demonstration environment URL]
-- **Technical Presentation**: [Project presentation slides URL]
-- **API Documentation**: [API documentation URL]
-- **User Manual**: [Comprehensive user guide URL]
+- **Technical Presentation**: [https://github.com/AryanSaxenaa/Kintsugi/blob/readme/Kintsugi.pdf]
+
 
 #### Code Repositories and Downloads
 - **Primary Repository**: [https://github.com/AryanSaxenaa/KintsugiNew](https://github.com/AryanSaxenaa/Kintsugi)
+- **Orchestrator**: [https://huggingface.co/spaces/Anvit25/Orchestrator_final]
+- **Audio Recording Functionality**: [https://huggingface.co/spaces/Anvit25/new_audio]
+- **Image Processing Capabilities**: [https://huggingface.co/spaces/Anvit25/vision-classifier]
+- **LLM Chatbot**: [https://huggingface.co/spaces/Anvit25/LLM_chatbot2]
+
 - **Issue Tracking**: [https://github.com/AryanSaxenaa/KintsugiNew/issues](https://github.com/AryanSaxenaa/Kintsugi/issues)
 
 #### Additional Materials
