@@ -408,7 +408,7 @@ Kintsugi incorporates four specialized AI services to provide comprehensive diag
 - **Stage 1 (Coarse Classification)**: Normal vs Abnormal detection (CNN on spectrograms)  
 - **Stage 2 (Fine Classification)**:  
   - If Normal → classify operational mode (Wash, Spin, etc.)  
-  - If Abnormal → classify anomaly type (e.g., Bearing noise, Dehydration noise)  
+  - If Abnormal → classify anomaly type (e.g., Background noise, Dehydration noise, Wash mode noise)  
 - **Preprocessing Specifications**:  
   - .wav audio → log-Mel spectrogram (224×224)  
   - Parameters: sr=22050, n_fft=2048, hop=512, n_mels=128  
