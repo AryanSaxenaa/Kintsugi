@@ -43,12 +43,12 @@ The Kintsugi application incorporates the following key functionalities:
 
 ## Purpose
   
-  -Solve common repair issues by providing accurate pre-diagnosis for household appliances (limited to washing machine for now)
-  -Reduce service costs by enabling self-diagnosis and minimizing unnecessary service calls.
-  -Support technicians by helping them identify issues early, prepare with the right tools, and reduce repeat visits.
-  -Bridge the gap between users, service teams, and brands like Samsung by integrating AI-powered insights.
-  -Optimize spare parts inventory and field service operations for service providers.
-  -Enable remote users to get diagnostic support even in areas with limited access to skilled technicians.
+- Solve common repair issues by providing accurate pre-diagnosis for household appliances (limited to washing machine for now)
+- Reduce service costs by enabling self-diagnosis and minimizing unnecessary service calls.
+- Support technicians by helping them identify issues early, prepare with the right tools, and reduce repeat visits.
+- Bridge the gap between users, service teams, and brands like Samsung by integrating AI-powered insights.
+- Optimize spare parts inventory and field service operations for service providers.
+- Enable remote users to get diagnostic support even in areas with limited access to skilled technicians.
 
 ## Technical Architecture
 
