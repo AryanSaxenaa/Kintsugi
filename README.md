@@ -8,21 +8,22 @@
 
 1. [Overview](#overview)
 2. [Core Features](#core-features)
-3. [Technical Architecture](#technical-architecture)
-4. [Installation and Setup](#installation-and-setup)
-5. [User Guide and Application Usage](#user-guide-and-application-usage)
-6. [Technical Implementation Details](#technical-implementation-details)
-7. [Project Structure and Organization](#project-structure-and-organization)
-8. [Design System and User Interface](#design-system-and-user-interface)
-9. [Quality Assurance and Testing](#quality-assurance-and-testing)
-10. [Build and Deployment Configuration](#build-and-deployment-configuration)
-11. [Troubleshooting and Problem Resolution](#troubleshooting-and-problem-resolution)
-12. [Integrated Artificial Intelligence Services](#integrated-artificial-intelligence-services)
-13. [Release Information and Version History](#release-information-and-version-history)
-14. [Contributing to the Project](#contributing-to-the-project)
-15. [License](#license)
-16. [Technical Support and Contact Information](#technical-support-and-contact-information)
-17. [Submissions](#submissions)
+3. [Purpose](#purpose)
+4. [Technical Architecture](#technical-architecture)
+5. [Installation and Setup](#installation-and-setup)
+6. [User Guide and Application Usage](#user-guide-and-application-usage)
+7. [Technical Implementation Details](#technical-implementation-details)
+8. [Project Structure and Organization](#project-structure-and-organization)
+9. [Design System and User Interface](#design-system-and-user-interface)
+10. [Quality Assurance and Testing](#quality-assurance-and-testing)
+11. [Build and Deployment Configuration](#build-and-deployment-configuration)
+12. [Troubleshooting and Problem Resolution](#troubleshooting-and-problem-resolution)
+13. [Integrated Artificial Intelligence Services](#integrated-artificial-intelligence-services)
+14. [Release Information and Version History](#release-information-and-version-history)
+15. [Contributing to the Project](#contributing-to-the-project)
+16. [License](#license)
+17. [Technical Support and Contact Information](#technical-support-and-contact-information)
+18. [Submissions](#submissions)
 
 ## Overview
 
@@ -39,6 +40,15 @@ The Kintsugi application incorporates the following key functionalities:
 - **Samsung Brand Integration**: Professional Samsung blue (#1428A0) color scheme implementation throughout the application
 - **Mobile-Optimized Design**: Responsive user interface optimized for Android devices
 - **Multimedia Processing Support**: Comprehensive handling of images (PNG/JPG), audio (WAV), and text inputs
+
+## Purpose
+  
+  -Solve common repair issues by providing accurate pre-diagnosis for household appliances (limited to washing machine for now)
+  -Reduce service costs by enabling self-diagnosis and minimizing unnecessary service calls.
+  -Support technicians by helping them identify issues early, prepare with the right tools, and reduce repeat visits.
+  -Bridge the gap between users, service teams, and brands like Samsung by integrating AI-powered insights.
+  -Optimize spare parts inventory and field service operations for service providers.
+  -Enable remote users to get diagnostic support even in areas with limited access to skilled technicians.
 
 ## Technical Architecture
 
